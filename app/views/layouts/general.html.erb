@@ -15,13 +15,12 @@
 <div id="title"><a href="/">Fetoncenar</a></div>
 <div id="menu">
 <% if current_user %>
-<%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> | 
-<%= link_to(I18n.t(:add_thing), :controller=>:things, :action=>:new)%> | 
-<%= link_to(I18n.t(:my_things), :controller=>:users, :action=>:profile, :id=>current_user.id)%> | 
+<%= link_to(I18n.t(:my_scripts), :controller=>:scripts, :action=>:list)%> | 
+<%= link_to(I18n.t(:my_profile), :controller=>:users, :action=>:profile, :id=>current_user.id)%> | 
 <%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
 <% else %>
 <%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new)%> |
-<%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> |
+<%= link_to(I18n.t(:all_scripts), :controller=>:scripts, :action=>:list_public)%> |
 <% end %>
 <a href="/?locale=fr">Français</a> |
 <a href="/?locale=en">English</a>
