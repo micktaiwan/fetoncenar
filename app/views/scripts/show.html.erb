@@ -11,7 +11,7 @@
 <%= render(:partial=>'chapter', :collection=>@chapters) %>
 </div>
 <br/>
-<%= link_to_remote(I18n.t(:new_chapter), :url=>{:controller=>:scripts, :action=>:new_chapter, :id=>@script.id}, :update=>:new_chapter) %><br/>
+<%= link_to_remote(I18n.t(:new_chapter), :url=>{:controller=>:scripts, :action=>:new_chapter, :id=>@script.id}, :update=>:new_chapter, :complete=>"$('new_chapter').scrollTo()") %><br/>
 <br/>
 
 <div id="new_chapter"></div>
