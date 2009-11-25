@@ -39,3 +39,12 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+I18n.default_locale = 'fr'
+ 
+LOCALES_DIRECTORY = "#{RAILS_ROOT}/config/locales"
+LOCALES_AVAILABLE = Dir["#{LOCALES_DIRECTORY}/*.{rb,yml}"].collect do |locale_file|
+  I18n.load_path << locale_file
+  File.basename(File.basename(locale_file, ".rb"), ".yml")
+end.uniq.sort
+

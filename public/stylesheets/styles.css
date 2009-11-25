@@ -1,0 +1,35 @@
+body      { font-family: sans; padding: 0px; margin: 0px; }
+#title    { background: #BCE; font-size: 3em; letter-spacing: -6px; padding: 0 0 0 10px; }
+#title a  { color: black }
+#menu     { padding: 3px 3px 3px 10px; margin: 0; background: #8AF; }
+#content  { padding: 0px 0 0 10px; }
+h1        { background: #F90; font-size: 1.2em; padding: 3px; margin: 0 0 10px -10px; padding: 0 0 0 10px; }
+h2        { background: #DDD; font-size: 1.2em; padding: 3px; margin: 0 0 0 -10px; padding: 0 0 0 10px; }
+label     { width: 120px; float: left; text-align: right; margin-right: 4px; display: block }
+p         { margin: 0; }
+a         { text-decoration: none; color:#00F; }
+a:visited { color:#00F; }
+img { border: 1px solid #444; }
+input, textarea { border: 1px solid #999; }
+.errorExplanation {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 10px;
+  background: #FDD;
+}
+.btnlnk {
+  border: 1px solid #595;
+  background:  #AFA;
+  padding: 0 2px 0 2px;
+  }  
+
+.warning {
+  background:  #F55;
+  border: 1px solid #900;
+  color: white;
+  }  
+.time {
+  font-weight: bold;
+  font-size: 0.8em;
+  }
+

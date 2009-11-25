@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="author" content="Vianney Rancurel, Mickael Faivre-Macon">
+	<meta name="keywords" content="script, author, movies, story">
+	<meta name="description" content="Write your own script !">
+	<meta name="robots" content="all">
+	<title>Fetoncenar</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="/images/favicon.ico">	
+	<link rel="stylesheet" href="/stylesheets/styles.css" type="text/css" />
+	<%= javascript_include_tag "prototype", "effects" %>
+</head>
+<body>
+<div id="title"><a href="/">Fetoncenar</a></div>
+<div id="menu">
+<% if current_user %>
+<%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> | 
+<%= link_to(I18n.t(:add_thing), :controller=>:things, :action=>:new)%> | 
+<%= link_to(I18n.t(:my_things), :controller=>:users, :action=>:profile, :id=>current_user.id)%> | 
+<%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
+<% else %>
+<%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new)%> |
+<%= link_to(I18n.t(:all_things), :controller=>:things, :action=>:all)%> |
+<% end %>
+<a href="/?locale=fr">Français</a> |
+<a href="/?locale=en">English</a>
+</div>
+<div id="content">
+<% if not current_user %>
+<br/>
+<%=I18n.t(:welcome)%><br/>
+<% end %>
+<%= yield %>
+</div>
+</body>
+</html>
