@@ -6,4 +6,5 @@ fr:
   my_profile:                   "Mon profile"
   logout:                       "Déconnexion"
   welcome:                      "Fais ton scénario !"
-  log_in:                       "Log in"
+  log_in:                       "Signer"
+  signup:                       "S'enregistrer"

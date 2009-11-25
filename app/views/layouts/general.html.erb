@@ -21,6 +21,7 @@
 <%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
 <% else %>
 <%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new)%> |
+<%= link_to(I18n.t(:signup), :controller=>:users, :action=>:new)%> |
 <% end %>
 <a href="/?locale=fr">Français</a> |
 <a href="/?locale=en">English</a>
