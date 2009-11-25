@@ -1,0 +1,6 @@
+<h1><%= I18n.t(:my_scripts) %></h1>
+
+<%= link_to(I18n.t(:create_script), :controller=>:scripts, :action=>:new)%><br/>
+<br/>
+<%= render(:partial=>'script', :collection=>@scripts) %>
+

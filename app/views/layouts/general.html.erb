@@ -15,8 +15,8 @@
 <div id="title"><a href="/">Fetoncenar</a></div>
 <div id="menu">
 <% if current_user %>
-<%= link_to(I18n.t(:link_all_scripts), :controller=>:scripts, :action=>:all_list)%> |
-<%= link_to(I18n.t(:my_scripts), :controller=>:scripts, :action=>:list)%> | 
+<%= link_to(I18n.t(:link_all_scripts), :controller=>:scripts)%> |
+<%= link_to(I18n.t(:my_scripts), :controller=>:scripts, :action=>:my)%> | 
 <!--<%= link_to(I18n.t(:my_profile), :controller=>:users, :action=>:profile, :id=>current_user.id)%> | -->
 <%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
 <% else %>

@@ -1,0 +1,7 @@
+<h1><%= @script.name %></h1>
+<% if @script.editors.include?(current_user) %>
+<%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>@script.id) %><br/>
+<br/>
+<% end %>
+
+<%= simple_format @script.pitch %>
