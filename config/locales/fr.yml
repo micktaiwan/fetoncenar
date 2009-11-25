@@ -1,0 +1,9 @@
+fr:
+  link_script:                  "Scripts"
+  my_scripts:                   "Mes scripts"
+  link_all_scripts:             "Voir les scripts publiques"
+  all_scripts:                  "Tous les scripts"
+  my_profile:                   "Mon profile"
+  logout:                       "Déconnexion"
+  welcome:                      "Fais ton scénario !"
+  log_in:                       "Log in"
