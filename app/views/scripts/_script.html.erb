@@ -1,4 +1,5 @@
-<%= script.name %>
+<b><%= script.name %></b>
+<%= link_to(I18n.t(:show), :controller=>:scripts, :action=>:show, :id=>script.id) %> |
 <%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>script.id) %>
 <br/>
 

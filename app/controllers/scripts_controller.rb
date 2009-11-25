@@ -17,7 +17,7 @@ class ScriptsController < ApplicationController
     @script.save
     @script.add_admin(current_user)
     if @script.errors.empty?
-      redirect_back_or_default('/scripts/my')
+      redirect_back_or_default("/scripts/show/#{@script.id}")
       flash[:notice] = I18n.t(:created_msg)
     else
       render :action => 'new'
