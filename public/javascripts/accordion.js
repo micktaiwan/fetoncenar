@@ -36,7 +36,7 @@ var Accordion = Class.create({
     expand: function(el) {
         this.toExpand = el.next('div.'+this.options.contentClass);
         if(this.current != this.toExpand){
-			this.toExpand.show();
+			      this.toExpand.show();
             this.animate();
         }
     },
@@ -116,12 +116,10 @@ var Accordion = Class.create({
                 this.toExpand.setStyle({ height: this.maxHeight+"px" });
                 this.current = this.toExpand;
                 this.isAnimating = false;
+                this.current.previous('div.'+this.options.toggleClass).scrollTo();
             }.bind(this)
         });
     }
 
 });
 
-document.observe("dom:loaded", function(){
-    accordion = new Accordion("test-accordion", 2);
-})
