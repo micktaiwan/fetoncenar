@@ -1,0 +1,16 @@
+<div id="new_chapter">
+<%#= link_to_function(image_tag('close.png'), "$('new_chapter').hide();") %>
+
+<%= error_messages_for :chapter %>
+<% form_remote_for(:chapter, @chapter, :url => {:action=>:create_chapter}, :loading=>"$('loading').show()", :update=>"script", :position=>:bottom, :complete=>"$('new_chapter').update('');") do |f| %>
+
+  <label><%=I18n.t(:chapter_title)%></label>
+  <%= f.text_field(:title) %><br/>
+  <%= f.hidden_field(:script_id, :value=>@script_id) %><br/>
+  <p><label>&nbsp;</label>
+  <%= submit_tag I18n.t(:send_data) %></p>
+<% end -%>
+
+<div id="loading" style="display:none;"><%= I18n.t(:saving) %>...</div>
+</div>
+

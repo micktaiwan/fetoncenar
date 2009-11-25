@@ -1,4 +1,7 @@
 fr:
+
+# site
+
   link_script:                  "Scénarios"
   my_scripts:                   "Mes scénarios"
   link_all_scripts:             "Voir les scénarios publiques"
@@ -8,10 +11,17 @@ fr:
   welcome:                      "Fais ton scénario !"
   log_in:                       "Signer"
   signup:                       "S'enregistrer"
-  create_script:                "Créer un nouveau scénario"
   send_data:                    "Envoyer"
-  name:                         "Titre"
-  pitch:                        "Synopsis"
   edit:                         "Editer"
-  edit_script:                  "Edition du script"
-  show:                         "Lire"
+  saving:                       "Sauvegarde"
+
+# scripts
+
+  create_script:                "Créer un nouveau scénario"
+  script_title:                 "Titre"
+  pitch:                        "Synopsis"
+  edit_script:                  "Edition du scénario"
+  read:                         "Lire"
+  new_chapter:                  "Nouveau chapitre"
+  chapter_title:                "Titre"
+

@@ -7,6 +7,12 @@
 <b><%= I18n.t(:pitch) %></b><br/>
 <%= simple_format @script.pitch %>
 <br/>
-<b>Chapitre 1</b><br/>
+<div id="script">
+<%= render(:partial=>'chapter', :collection=>@chapters) %>
+</div>
 <br/>
-Ici les chapitres et paragraphes
+<%= link_to_remote(I18n.t(:new_chapter), :url=>{:controller=>:scripts, :action=>:new_chapter, :id=>@script.id}, :update=>:new_chapter) %><br/>
+<br/>
+
+<div id="new_chapter"></div>
+

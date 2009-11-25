@@ -37,7 +37,29 @@ class ScriptsController < ApplicationController
   end
   
   def show
-    @script = Script.find(params[:id])
+    script_id = params[:id]
+    @script   = Script.find(script_id)
+    @chapters = Chapter.find(:all, :conditions=>["script_id=?", script_id], :order=>"`order`")
+  end
+  
+  def new_chapter
+    @script_id = params[:id]
+    @chapter = Chapter.new
+    render(:partial=>'new_chapter')
   end
 
+  def create_chapter
+    @chapter = Chapter.new(params[:chapter])
+    script = Script.find(params[:chapter][:script_id])
+    @chapter.order = script.chapters.size
+    @chapter.save
+    if @chapter.errors.empty?
+      render(:partial=>'chapter')
+    else
+      render(:text=>"alert('error');")
+    end
+  end
+
+
 end
+

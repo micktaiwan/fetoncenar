@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091125182827) do
+ActiveRecord::Schema.define(:version => 20091125212156) do
+
+  create_table "chapters", :force => true do |t|
+    t.integer  "script_id",  :null => false
+    t.integer  "order"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "scripts", :force => true do |t|
     t.string   "name"
