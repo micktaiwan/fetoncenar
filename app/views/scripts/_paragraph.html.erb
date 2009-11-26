@@ -1,1 +1,4 @@
-<div class="paragraph"><%= paragraph.text %></div>
+<div id="para_<%=paragraph.id%>" class="paragraph">
+<%= simple_format(paragraph.text) %>
+<%= link_to_remote(image_tag('para_delete.png'), :url=>{:action=>:destroy_para, :id=>paragraph.id}, :loading=>"$('para_#{paragraph.id}').hide();") %>
+</div>

@@ -66,5 +66,22 @@ class ScriptsController < ApplicationController
     render(:partial=>'new_para')
   end
 
+  def create_para
+    @paragraph = Paragraph.new(params[:para])
+    chapter = Chapter.find(params[:para][:chapter_id])
+    @paragraph.order = chapter.paragraphs.size
+    @paragraph.save
+    if @paragraph.errors.empty?
+      render(:partial=>'paragraph')
+    else
+      render(:text=>"alert('error');")
+    end
+  end
+
+  def destroy_para
+    Paragraph.find(params[:id]).destroy
+    render(:nothing=>true)
+  end
+
 end
 

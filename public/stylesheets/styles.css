@@ -32,4 +32,6 @@ input, textarea { border: 1px solid #999; }
   font-weight: bold;
   font-size: 0.8em;
   }
-
+.paragraph {
+  margin:10px;
+  }

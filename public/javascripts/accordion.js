@@ -65,7 +65,7 @@ var Accordion = Class.create({
         for(var i=0; i<this.contents.length; i++){
             if(this.contents[i] != this.current) {
                 this.contents[i].hide();
-                this.contents[i].setStyle({height: 0});
+                //this.contents[i].setStyle({height: 0});
             }
         }
     },
@@ -78,7 +78,7 @@ var Accordion = Class.create({
             scaleContent: false,
             transition: Effect.Transitions.sinoidal,
             scaleMode: {
-                originalHeight: this.maxHeight,
+                originalHeight: this.toExpand.clientHeight, //this.maxHeight,
                 originalWidth: this.accordion.getWidth()
             },
             scaleX: false,
@@ -113,7 +113,7 @@ var Accordion = Class.create({
             }.bind(this),
             afterFinish: function() {
                 this.current.hide();
-                this.toExpand.setStyle({ height: this.maxHeight+"px" });
+                //this.toExpand.setStyle({ height: this.toExpand.clientHeight+"px"}); //maxHeight+"px" });
                 this.current = this.toExpand;
                 this.isAnimating = false;
                 this.current.previous('div.'+this.options.toggleClass).scrollTo();

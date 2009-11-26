@@ -1,12 +1,12 @@
 #script {
-  margin: 20px 20px 20px 100px;
-  width: 400px;
+  margin: 20px 20px 20px 50px;
+  width: 600px;
 }
 
 .accordion-toggle {
 	display: block;
 	height: 30px;
-	width: 400px;
+	width: 600px;
 	background: url(/images/accordion_toggle.jpg) no-repeat top right #a9d06a;
 	padding: 0 10px 0 10px;
 	line-height: 30px;
@@ -31,5 +31,6 @@
 	background-color: #ffffff;
 	color: #444444;
 	overflow: hidden;
+	text-align: justify;
 }
 
