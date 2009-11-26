@@ -1,0 +1,15 @@
+<div id="new_para">
+
+<%= error_messages_for :para %>
+<% form_remote_for(:para, @para, :url => {:action=>:create_para}, :loading=>"$('loading').show()", :update=>"ch_#{@chapter_id}", :position=>:bottom, :complete=>"$('new_para_#{@chapter_id}').update('');") do |f| %>
+
+  <%=I18n.t(:para_text)%>:<br/>
+  <%= f.text_area(:text, :rows=>8, :cols=>50) %><br/>
+  <%= f.hidden_field(:chapter_id, :value=>@chapter_id) %><br/>
+  <%= submit_tag I18n.t(:send_data) %><br/>
+  <br/>
+<% end -%>
+
+<div id="loading" style="display:none;"><%= I18n.t(:saving) %>...</div>
+</div>
+

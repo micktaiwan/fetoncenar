@@ -60,6 +60,11 @@ class ScriptsController < ApplicationController
     end
   end
 
+  def new_para
+    @chapter_id = params[:id]
+    @para = Paragraph.new
+    render(:partial=>'new_para')
+  end
 
 end
 

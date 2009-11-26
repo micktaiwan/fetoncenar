@@ -24,6 +24,8 @@ fr:
   read:                         "Lire"
   new_chapter:                  "Nouveau chapitre"
   chapter_title:                "Titre"
+  add_para:                     "Ajouter un nouveau paragraphe"
+  para_text:                         "Texte"
       
   activerecord:
     errors:

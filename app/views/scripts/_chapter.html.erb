@@ -1,11 +1,10 @@
-<div class="accordion-toggle"><%= chapter.title %></div>
-<div class="accordion-content">
-<%#= render(:partial=>'paragraph', :collection=>chapter.paragraphs) %>
-Curabitur quam lorem, laoreet molestie, eleifend id, pulvinar vel, nunc. Proin congue felis quis purus. Aenean porttitor, lacus vel bibendum pulvinar, leo nulla suscipit leo, nec lobortis orci diam eget turpis. Sed eu eros et orci consectetuer molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>
-<br/>
-Curabitur quam lorem, laoreet molestie, eleifend id, pulvinar vel, nunc. Proin congue felis quis purus. Aenean porttitor, lacus vel bibendum pulvinar, leo nulla suscipit leo, nec lobortis orci diam eget turpis. Sed eu eros et orci consectetuer molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>
-<br/>
-Curabitur quam lorem, laoreet molestie, eleifend id, pulvinar vel, nunc. Proin congue felis quis purus. Aenean porttitor, lacus vel bibendum pulvinar, leo nulla suscipit leo, nec lobortis orci diam eget turpis. Sed eu eros et orci consectetuer molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>
+<div class="accordion-toggle">
+<%= chapter.title %>
+<%= link_to_remote(image_tag('para_add.png'), :url=>{:action=>:new_para, :id=>chapter.id}, :update=>"new_para_#{chapter.id}", :position=>:bottom) %>
+</div>
 
+<div id="ch_<%=chapter.id%>" class="accordion-content">
+<%= render(:partial=>'paragraph', :collection=>chapter.paragraphs) %>
+<div id="new_para_<%=chapter.id%>"></div>
 </div>
 

@@ -1,7 +1,7 @@
 class AppMailer < ActionMailer::Base
   
   def alert(title, msg)
-    @subject    = '[Swap] ' + title
+    @subject    = '[fetoncenar] ' + title
     @body["msg"] = msg
     @recipients = 'faivrem@gmail.com'
     @from       = 'protask@protaskm.com'
@@ -10,7 +10,7 @@ class AppMailer < ActionMailer::Base
   end
   
   def message(m, recipients)
-    @subject    = "[Swap!] Message from #{m.user.name}"
+    @subject    = "[fetoncenar] Message from #{m.user.name}"
     @body["m"] = m
     @recipients = recipients
     @from       = m.user.email

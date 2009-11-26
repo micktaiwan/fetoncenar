@@ -9,7 +9,7 @@ label     { width: 120px; float: left; text-align: right; margin-right: 4px; dis
 p         { margin: 0; }
 a         { text-decoration: none; color:#00F; }
 a:visited { color:#00F; }
-img { border: 1px solid #444; }
+img { border: 0px}
 input, textarea { border: 1px solid #999; }
 .errorExplanation {
   border: 1px solid #333;

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     logout_keeping_session!
     user = User.authenticate(params[:email], params[:password])
     if user
-      AppMailer.deliver_alert("[fetoncenar] #{user.email} logged in", "")
+      AppMailer.deliver_alert("#{user.email} logged in", "#{user.email} logged in")
       # Protects against session fixation attacks, causes request forgery
       # protection if user resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
