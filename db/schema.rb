@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091126095938) do
+ActiveRecord::Schema.define(:version => 20091126163051) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "script_id",  :null => false
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20091126095938) do
     t.text     "trailer"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "public",     :default => 0
   end
 
   create_table "user_scripts", :id => false, :force => true do |t|

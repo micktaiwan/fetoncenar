@@ -4,3 +4,10 @@
 <p><%= label_tag I18n.t(:pitch) %>
 <%= text_area :script, :pitch %></p>
 
+<p><%= label_tag I18n.t(:public) %>
+<%= radio_button :script, :public, 0, :selected=>true %>
+<%= I18n.t(:__no) %>
+<%= radio_button :script, :public, 1 %>
+<%= I18n.t(:_yes) %>
+</p>
+

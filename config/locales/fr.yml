@@ -5,7 +5,7 @@ fr:
   link_script:                  "Scénarios"
   my_scripts:                   "Mes scénarios"
   link_all_scripts:             "Voir les scénarios publiques"
-  all_scripts:                  "Tous les scénarios"
+  all_scripts:                  "Tous les scénarios publiques"
   my_profile:                   "Mon profile"
   logout:                       "Déconnexion"
   welcome:                      "Fais ton scénario !"
@@ -25,8 +25,11 @@ fr:
   new_chapter:                  "Nouveau chapitre"
   chapter_title:                "Titre"
   add_para:                     "Ajouter un nouveau paragraphe"
-  para_text:                         "Texte"
-      
+  para_text:                    "Texte"
+  public:                       "Publique"
+  _yes:                         "Oui"
+  __no:                         "Non"
+
   activerecord:
     errors:
       models:

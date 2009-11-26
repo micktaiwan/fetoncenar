@@ -1,7 +1,7 @@
 class ScriptsController < ApplicationController
 
   def index
-    @scripts = []
+    @scripts = Script.find(:all, :conditions=>"public=1")
   end
   
   def my
