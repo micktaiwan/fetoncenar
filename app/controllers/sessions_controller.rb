@@ -1,9 +1,5 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
-
-  # render new.rhtml
   def new
   end
 
@@ -11,6 +7,7 @@ class SessionsController < ApplicationController
     logout_keeping_session!
     user = User.authenticate(params[:email], params[:password])
     if user
+      AppMailer.deliver_alert("[fetoncenar] #{user.email} logged in", "")
       # Protects against session fixation attacks, causes request forgery
       # protection if user resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
