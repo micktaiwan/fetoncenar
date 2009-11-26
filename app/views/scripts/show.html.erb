@@ -4,10 +4,10 @@
 <br/>
 <% end %>
 
-<b><%= I18n.t(:pitch) %></b><br/>
+<div id="script">
+<div class="accordion-toggle accordion-toggle-active"><%= I18n.t(:pitch) %></div>
 <%= simple_format @script.pitch %>
 <br/>
-<div id="script">
 <%= render(:partial=>'chapter', :collection=>@chapters) %>
 </div>
 <br/>

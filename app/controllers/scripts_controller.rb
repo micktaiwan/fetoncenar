@@ -60,6 +60,19 @@ class ScriptsController < ApplicationController
     end
   end
 
+  def edit_chapter
+    # TODO: verify edit rights
+    @chapter = Chapter.find(params[:id])
+    render(:partial=>'edit_chapter')
+  end
+  
+  def update_chapter
+    # TODO: verify edit rights
+    @chapter = Chapter.find(params[:id])
+    @chapter.update_attributes(params[:chapter])
+    render(:partial=>'chapter_title')
+  end
+  
   def new_para
     @chapter_id = params[:id]
     @para = Paragraph.new

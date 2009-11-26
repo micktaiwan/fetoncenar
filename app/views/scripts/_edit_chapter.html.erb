@@ -1,0 +1,8 @@
+<%= error_messages_for :chapter %>
+<% form_remote_for(:chapter, @chapter, :url => {:action=>:update_chapter, :id=>@chapter.id}, :loading=>"$('loading').show()", :update=>"ch_title_#{@chapter.id}") do |f| %>
+  <%= f.text_field(:title) %>
+  <%= submit_tag I18n.t(:send_data) %>
+  <div id="loading" style="display:none;"><%= I18n.t(:saving) %>...</div>
+  <%= f.hidden_field(:script_id, :value=>@script_id) %>
+<% end -%>
+
