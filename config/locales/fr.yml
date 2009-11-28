@@ -15,6 +15,8 @@ fr:
   edit:                         "Editer"
   saving:                       "Sauvegarde"
   del_confirm:                  "Effacer pour toujours ?"
+  updated_at:                   "Mis à jour il y a {{time}}"
+  editors:                      "Editeurs"
 
 # scripts
 

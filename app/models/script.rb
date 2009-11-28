@@ -8,6 +8,10 @@ class Script < ActiveRecord::Base
   def add_admin(user)
     UserScript.create(:user_id=>user.id, :script_id=>self.id, :rights=>1)
   end  
+  
+  def editor_names
+    self.editors.collect { |c| c.email.split("@")[0]} * ", "
+  end
 
 end
 

@@ -3,7 +3,8 @@
 <%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>@script.id) %><br/>
 <br/>
 <% end %>
-
+<%= I18n.t(:editors) %>: <%= @script.editor_names%><br/>
+<%= I18n.t(:updated_at, :time=>time_ago_in_words(@script.updated_at)) %><br/>
 <div id="script">
 <div class="accordion-toggle accordion-toggle-active"><%= I18n.t(:pitch) %></div>
 <%= simple_format @script.pitch %>
