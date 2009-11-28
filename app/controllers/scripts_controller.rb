@@ -70,7 +70,7 @@ class ScriptsController < ApplicationController
     # TODO: verify edit rights
     @chapter = Chapter.find(params[:id])
     @chapter.update_attributes(params[:chapter])
-    render(:partial=>'chapter_title')
+    render(:partial=>'chapter_title', :locals=>{:chapter=>@chapter})
   end
   
   def new_para
@@ -89,6 +89,19 @@ class ScriptsController < ApplicationController
     else
       render(:text=>"alert('error');")
     end
+  end
+
+  def edit_para
+    # TODO: verify edit rights
+    @para = Paragraph.find(params[:id])
+    render(:partial=>'edit_para')
+  end
+
+  def update_para
+    # TODO: verify edit rights
+    @paragraph = Paragraph .find(params[:id])
+    @paragraph.update_attributes(params[:para])
+    @str = render_to_string(:partial=>'paragraph')
   end
 
   def destroy_para

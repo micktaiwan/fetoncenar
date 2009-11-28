@@ -1,7 +1,5 @@
 <div id="to_<%=chapter.id%>" class="accordion-toggle" onclick="$('ch_<%=chapter.id%>').toggle();">
-<div id="ch_title_<%=chapter.id%>" class="chapter_title"><%= chapter.title %></div>
-<%= link_to_remote(image_tag('chap_edit.png'), :url=>{:action=>:edit_chapter, :id=>chapter.id}, :update=>"ch_title_#{chapter.id}") %>
-<%= link_to_remote(image_tag('para_add.png'), :url=>{:action=>:new_para, :id=>chapter.id}, :loading=>"$('ch_#{chapter.id}').show();$('new_para_#{chapter.id}').scrollTo();", :update=>"new_para_#{chapter.id}", :position=>:bottom) %>
+<div id="ch_title_<%=chapter.id%>" class="chapter_title"><%= render(:partial=>'chapter_title', :locals=>{:chapter=>chapter}) %></div>
 </div>
 
 <div id="ch_<%=chapter.id%>" class="accordion-content">

@@ -1,0 +1,2 @@
+page["para_#{@paragraph.id}"].replace @str
+

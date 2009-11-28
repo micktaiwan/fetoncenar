@@ -38,3 +38,10 @@ input, textarea { border: 1px solid #999; }
 .chapter_title {
   display: inline;
   }
+.loading {
+  background:  #AAA;
+  border: 1px solid #555;
+  z-index:100;
+  position: absolute;
+  }
+

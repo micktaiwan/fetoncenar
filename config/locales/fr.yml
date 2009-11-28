@@ -14,6 +14,7 @@ fr:
   send_data:                    "Envoyer"
   edit:                         "Editer"
   saving:                       "Sauvegarde"
+  del_confirm:                  "Effacer pour toujours ?"
 
 # scripts
 

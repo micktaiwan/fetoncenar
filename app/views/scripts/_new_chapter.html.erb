@@ -4,7 +4,7 @@
   <%=I18n.t(:chapter_title)%>
   <%= f.text_field(:title) %>
   <%= submit_tag I18n.t(:send_data) %>
-  <div id="loading" style="display:none;"><%= I18n.t(:saving) %>...</div>
+  <div id="loading" class="loading" style="display:none;"><%= I18n.t(:saving) %>...</div>
   <br/>
   <%= f.hidden_field(:script_id, :value=>@script_id) %>
 <% end -%>
