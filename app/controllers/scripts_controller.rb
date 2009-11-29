@@ -25,13 +25,13 @@ class ScriptsController < ApplicationController
   end
 
   def edit
-    # TODO: verify edit rights
     @script = Script.find(params[:id])
+    check_role(@script, "cowriters")
   end
   
   def update
-    # TODO: verify edit rights
     script = Script.find(params[:id])
+    check_role(script, "cowriters")
     script.update_attributes(params[:script])
     redirect_to :action=>:show, :id=>script.id
   end
@@ -44,6 +44,8 @@ class ScriptsController < ApplicationController
   
   def new_chapter
     @script_id = params[:id]
+    script = Script.find(@script_id)
+    check_role(script, "cowriters")
     @chapter = Chapter.new
     render(:partial=>'new_chapter')
   end
@@ -61,14 +63,14 @@ class ScriptsController < ApplicationController
   end
 
   def edit_chapter
-    # TODO: verify edit rights
     @chapter = Chapter.find(params[:id])
+    check_role(@chapter.script, "cowriters")
     render(:partial=>'edit_chapter')
   end
   
   def update_chapter
-    # TODO: verify edit rights
     @chapter = Chapter.find(params[:id])
+    check_role(@chapter.script, "cowriters")
     @chapter.update_attributes(params[:chapter])
     render(:partial=>'chapter_title', :locals=>{:chapter=>@chapter})
   end
@@ -92,14 +94,14 @@ class ScriptsController < ApplicationController
   end
 
   def edit_para
-    # TODO: verify edit rights
     @para = Paragraph.find(params[:id])
+    check_role(@para.chapter.script, "cowriters")
     render(:partial=>'edit_para')
   end
 
   def update_para
-    # TODO: verify edit rights
     @paragraph = Paragraph .find(params[:id])
+    check_role(@paragraph.chapter.script, "cowriters")
     @paragraph.update_attributes(params[:para])
     @str = render_to_string(:partial=>'paragraph')
   end
@@ -109,5 +111,11 @@ class ScriptsController < ApplicationController
     render(:nothing=>true)
   end
 
+private
+
+  def check_role(script, role, user=current_user)
+    raise 'no permission' if not eval("script.#{role}").include?(user)
+  end
+  
 end
 

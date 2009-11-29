@@ -23,15 +23,14 @@
 <% else %>
 <%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new)%> |
 <%= link_to(I18n.t(:signup), :controller=>:users, :action=>:new)%> |
+<%= link_to(I18n.t(:link_all_scripts), :controller=>:scripts)%> |
 <% end %>
 <a href="/?locale=fr">Français</a> |
 <a href="/?locale=en">English</a>
 </div>
 <div id="content">
-<% if not current_user %>
-<br/>
-<%=I18n.t(:welcome)%><br/>
-<br/>
+<% if not current_user and action_name != "show" %>
+<%= render(:file=>"welcome/welcome_"+get_locale) %>
 <% end %>
 <%= yield %>
 </div>

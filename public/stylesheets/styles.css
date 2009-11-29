@@ -17,12 +17,17 @@ input, textarea { border: 1px solid #999; }
   margin: 10px;
   background: #FDD;
 }
+
+.text_content {
+  margin: 20px 20px 20px 50px;
+  width: 600px;
+}
+
 .btnlnk {
   border: 1px solid #595;
   background:  #AFA;
   padding: 0 2px 0 2px;
   }  
-
 .warning {
   background:  #F55;
   border: 1px solid #900;

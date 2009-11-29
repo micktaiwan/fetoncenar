@@ -8,7 +8,6 @@ fr:
   all_scripts:                  "Tous les scénarios publiques"
   my_profile:                   "Mon profile"
   logout:                       "Déconnexion"
-  welcome:                      "Fais ton scénario !"
   log_in:                       "Signer"
   signup:                       "S'enregistrer"
   send_data:                    "Envoyer"
@@ -16,7 +15,7 @@ fr:
   saving:                       "Sauvegarde"
   del_confirm:                  "Effacer pour toujours ?"
   updated_at:                   "Mis à jour il y a {{time}}"
-  editors:                      "Editeurs"
+  contributors:                 "Contributeurs"
 
 # scripts
 

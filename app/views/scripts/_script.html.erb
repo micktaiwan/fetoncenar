@@ -1,5 +1,8 @@
 <b><%= script.name %></b>
-<%= link_to(I18n.t(:read), :controller=>:scripts, :action=>:show, :id=>script.id) %> |
-<%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>script.id) %>
+<%= link_to(I18n.t(:read), :controller=>:scripts, :action=>:show, :id=>script.id) %>
+
+<% if script.cowriters.include?(current_user) %>
+| <%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>script.id) %>
+<% end %>
 <br/>
 
