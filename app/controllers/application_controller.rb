@@ -1,8 +1,6 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
-include ApplicationHelper
-
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
@@ -16,6 +14,8 @@ class ApplicationController < ActionController::Base
   
   
 private
+  
+  include ApplicationHelper
   
   def set_locale
     locale = I18n.locale = get_locale

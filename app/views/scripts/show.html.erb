@@ -1,5 +1,5 @@
 <h1><%= @script.name %></h1>
-<% if @script.cowriters.include?(current_user) %>
+<% has_rights = @script.cowriters.include?(current_user) ; if has_rights %>
 <%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>@script.id) %><br/>
 <br/>
 <% end %>
@@ -11,9 +11,11 @@
 <br/>
 <%= render(:partial=>'chapter', :collection=>@chapters) %>
 </div>
+
+<% if has_rights %>
 <br/>
 <%= link_to_remote(I18n.t(:new_chapter), :url=>{:controller=>:scripts, :action=>:new_chapter, :id=>@script.id}, :update=>:new_chapter, :complete=>"$('new_chapter').scrollTo()") %><br/>
 <br/>
-
 <div id="new_chapter"></div>
+<% end %>
 
