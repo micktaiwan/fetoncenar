@@ -16,6 +16,7 @@ fr:
   del_confirm:                  "Effacer pour toujours ?"
   updated_at:                   "Mis à jour il y a {{time}}"
   contributors:                 "Contributeurs"
+  show:                         "Montrer"
 
 # scripts
 
@@ -31,6 +32,13 @@ fr:
   public:                       "Publique"
   _yes:                         "Oui"
   __no:                         "Non"
+
+# development
+
+  development:                  "Construction"
+  characters:                   "Personnages"
+  new_character:                "Créer un personnage"
+  real_story:                   "La véritable histoire. Donnez les détails de l'histoire pour vos collaborateurs."
 
   activerecord:
     errors:

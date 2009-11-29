@@ -1,0 +1,14 @@
+La partie construction rassemble toutes les parties du scénario qui aide
+l'auteur et les coauteurs à développer les idées, les personnages, les lieux.<br/>
+<br/>
+<%= I18n.t(:real_story) %>
+<%= link_to_function(I18n.t(:edit), "$('rs').toggle()") %><br/>
+
+<div id="rs" style="display:none;">
+<%= text_area(:script, :real_story, :cols=>70, :rows=>15, :value=>"Attention, ça ne sauvegarde pas encore") %><br/>
+<%= submit_tag(I18n.t(:send_data)) %><br/>
+</div>
+<br/>
+<%= link_to(I18n.t(:new_character), :controller=>:characters, :action=>:new) %><br/>
+<br/>
+
