@@ -1,5 +1,7 @@
 class Script < ActiveRecord::Base
 
+  include ApplicationHelper
+
   has_many :user_scripts
   has_many :contributors, :through=>:user_scripts
   has_many :authors,      :through=>:user_scripts, :conditions=>"rights<=#{Role::Author}"
