@@ -1,7 +1,7 @@
 class ScriptsController < ApplicationController
 
   def index
-    @scripts = Script.find(:all, :conditions=>"public=1")
+    @scripts = Script.find(:all, :conditions=>"public=1", :order=>"updated_at desc")
   end
   
   def my
@@ -39,6 +39,7 @@ class ScriptsController < ApplicationController
   def show
     script_id = params[:id]
     @script   = Script.find(script_id)
+    check_show_rights(@script, "reviewers")
     @chapters = Chapter.find(:all, :conditions=>["script_id=?", script_id], :order=>"`order`")
   end
   
@@ -114,7 +115,16 @@ class ScriptsController < ApplicationController
 private
 
   def check_role(script, role, user=current_user)
-    raise 'no permission' if not eval("script.#{role}").include?(user)
+    redirect_to "/welcome/no_permission" if not eval("script.#{role}").include?(user)
+  end
+
+  def check_show_rights(script, role, user=current_user)
+    redirect_to "/welcome/no_permission" if @script.public==0  and not eval("script.#{role}").include?(user)
+  end
+
+  def check_public
+    redirect_to "/welcome/no_permission" if @script.public==0  
+    return true
   end
   
 end

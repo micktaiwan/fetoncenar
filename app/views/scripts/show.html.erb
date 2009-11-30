@@ -1,7 +1,7 @@
 <h1><%= @script.name %></h1>
 <% has_rights = @script.cowriters.include?(current_user) ; if has_rights %>
-<%= link_to(I18n.t(:edit), :controller=>:scripts, :action=>:edit, :id=>@script.id) %> |
-<%= link_to(I18n.t(:development), :controller=>:development, :id=>@script.id) %><br/>
+<%= link_to(I18n.t(:edit), {:controller=>:scripts, :action=>:edit, :id=>@script.id}, {:class=>'btnlnk'}) %> |
+<%= link_to(I18n.t(:development), {:controller=>:development, :id=>@script.id}, {:class=>'btnlnk'}) %><br/>
 <br/>
 <% end %>
 <%= I18n.t(:contributors) %>: <%= @script.contributors_names%><br/>

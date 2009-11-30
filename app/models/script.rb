@@ -16,6 +16,6 @@ class Script < ActiveRecord::Base
   def contributors_names
     self.contributors.collect { |c| c.email.split("@")[0]} * ", "
   end
-
+  
 end
 

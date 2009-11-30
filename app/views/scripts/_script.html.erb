@@ -1,3 +1,5 @@
 <%= link_to(script.name, :controller=>:scripts, :action=>:show, :id=>script.id) %>
+<span class="time"><%= time_ago_in_words(script.updated_at) %></span>
+<% if script.public==1 %><strong><%= I18n.t(:public) %></strong><% end %>
 <br/>
 

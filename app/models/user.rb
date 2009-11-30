@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
   
   has_many :user_scripts
-  has_many :scripts, :through=>:user_scripts
+  has_many :scripts, :through=>:user_scripts, :order=>"updated_at desc"
 
   validates_format_of       :name,     :with => Authentication.name_regex,  :message => Authentication.bad_name_message, :allow_nil => true
   validates_length_of       :name,     :maximum => 100
