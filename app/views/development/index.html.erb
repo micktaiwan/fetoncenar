@@ -2,18 +2,12 @@ La partie construction rassemble toutes les parties du scénario qui aide
 l'auteur et les coauteurs à développer les idées, les personnages, les lieux.<br/>
 <br/>
 <%= I18n.t(:real_story) %>
-<%= link_to_function(I18n.t(:edit), "$('rs').toggle()", :class=>'btnlnk') %><br/>
+<%= link_to(I18n.t(:edit), {:action=>:edit_real_story, :id=>@script.id}, {:class=>'btnlnk'}) %><br/>
 
-<div id="rs" style="display:none;">
-<% form_remote_for(:script, @script, :url => {:action=>:update_real_story, :id=>@script.id}, :loading=>"$('loading').show()", :complete=>"$('loading').hide()") do |f| %>
-<%= text_area(:script, :real_story, :cols=>70, :rows=>15) %><br/>
-<%= submit_tag(I18n.t(:send_data)) %><br/>
-<% end -%>
+<div class="text_content">
+<%= @script.real_story.to_html %>
 </div>
 
-<div id="loading" style="display:none;">...</div>
-
-<br/>
 <%= link_to(I18n.t(:new_character), {:controller=>:characters, :action=>:new}, {:class=>'btnlnk'}) %><br/>
 <br/>
 

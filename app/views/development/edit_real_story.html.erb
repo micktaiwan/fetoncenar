@@ -1,0 +1,7 @@
+Formatting: <a href="http://redcloth.org/try-redcloth/">Textile</a><br/>
+<br/>
+<% form_for(:script, @script, :url => {:action=>:update_real_story, :id=>@script.id}) do |f| %>
+<%= text_area(:script, :real_story, :cols=>70, :rows=>15) %><br/>
+<%= submit_tag(I18n.t(:send_data)) %><br/>
+<% end -%>
+
