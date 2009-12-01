@@ -1,9 +1,9 @@
-document.observe("dom:loaded", function(){
-  contents = $('script').select('div.accordion-content');
-  for(var i=0; i< contents.length; i++){
-      contents[i].hide();
-      }
-  })
+//document.observe("dom:loaded", function(){
+//  contents = $('script').select('div.accordion-content');
+//  for(var i=0; i< contents.length; i++){
+//      contents[i].hide();
+//      }
+//  })
 
 function my_expand(el, c) {
   c.show();

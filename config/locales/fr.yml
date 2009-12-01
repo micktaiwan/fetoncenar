@@ -30,7 +30,8 @@ fr:
   chapter_title:                "Titre"
   add_para:                     "Ajouter un nouveau paragraphe"
   para_text:                    "Texte"
-  public:                       "Publique"
+  public:                       "Public"
+  script_published:             "Publié"
   _yes:                         "Oui"
   __no:                         "Non"
 

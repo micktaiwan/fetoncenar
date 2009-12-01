@@ -112,20 +112,5 @@ class ScriptsController < ApplicationController
     render(:nothing=>true)
   end
 
-private
-
-  def check_role(script, role, user=current_user)
-    redirect_to "/welcome/no_permission" if not eval("script.#{role}").include?(user)
-  end
-
-  def check_show_rights(script, role, user=current_user)
-    redirect_to "/welcome/no_permission" if @script.public==0  and not eval("script.#{role}").include?(user)
-  end
-
-  def check_public
-    redirect_to "/welcome/no_permission" if @script.public==0  
-    return true
-  end
-  
 end
 

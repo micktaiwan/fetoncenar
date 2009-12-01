@@ -5,9 +5,14 @@ l'auteur et les coauteurs à développer les idées, les personnages, les lieux.
 <%= link_to_function(I18n.t(:edit), "$('rs').toggle()", :class=>'btnlnk') %><br/>
 
 <div id="rs" style="display:none;">
-<%= text_area(:script, :real_story, :cols=>70, :rows=>15, :value=>"Attention, ça ne sauvegarde pas encore") %><br/>
+<% form_remote_for(:script, @script, :url => {:action=>:update_real_story, :id=>@script.id}, :loading=>"$('loading').show()", :complete=>"$('loading').hide()") do |f| %>
+<%= text_area(:script, :real_story, :cols=>70, :rows=>15) %><br/>
 <%= submit_tag(I18n.t(:send_data)) %><br/>
+<% end -%>
 </div>
+
+<div id="loading" style="display:none;">...</div>
+
 <br/>
 <%= link_to(I18n.t(:new_character), {:controller=>:characters, :action=>:new}, {:class=>'btnlnk'}) %><br/>
 <br/>

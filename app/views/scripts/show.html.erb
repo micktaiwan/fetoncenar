@@ -15,7 +15,7 @@
 
 <% if has_rights %>
 <br/>
-<%= link_to_remote(I18n.t(:new_chapter), :url=>{:controller=>:scripts, :action=>:new_chapter, :id=>@script.id}, :update=>:new_chapter, :complete=>"$('new_chapter').scrollTo()") %><br/>
+<%= link_to_remote(I18n.t(:new_chapter), {:url=>{:controller=>:scripts, :action=>:new_chapter, :id=>@script.id}, :update=>:new_chapter, :complete=>"$('new_chapter').scrollTo()"}, {:class=>'btnlnk'}) %><br/>
 <br/>
 <div id="new_chapter"></div>
 <% end %>
