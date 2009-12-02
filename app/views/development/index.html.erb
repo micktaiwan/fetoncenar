@@ -5,7 +5,7 @@ l'auteur et les coauteurs à développer les idées, les personnages, les lieux.
 <%= link_to(I18n.t(:edit), {:action=>:edit_real_story, :id=>@script.id}, {:class=>'btnlnk'}) %><br/>
 
 <div class="text_content">
-<%= @script.real_story.to_html %>
+<%= @script.real_story.chain(:to_html) %>
 </div>
 
 <%= link_to(I18n.t(:new_character), {:controller=>:characters, :action=>:new}, {:class=>'btnlnk'}) %><br/>

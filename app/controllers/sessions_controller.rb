@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Logged in successfully"
     else
       note_failed_signin
-      @emaill       = params[:email]
+      @email       = params[:email]
       @remember_me = params[:remember_me]
       render :action => 'new'
     end
@@ -38,3 +38,4 @@ protected
     logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
 end
+

@@ -25,4 +25,29 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
+  
+  def profile
+    id = params[:id]
+    if not id
+      @user = current_user
+    else
+      @user = User.find(id)
+    end
+  end
+
+  def edit
+    @user = current_user
+  end
+  
+  def update
+    @user = current_user
+    if @user.update_attributes(params[:user]) # do a save
+      redirect_back_or_default('/users/profile')
+      flash[:notice] = I18n.t(:edited_msg)
+    else
+      render :action => 'edit'
+    end
+  end
+  
+  
 end

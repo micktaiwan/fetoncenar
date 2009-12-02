@@ -1,0 +1,18 @@
+<h1><%=I18n.t(:edit_my_profile)%></h1>
+
+<%= error_messages_for :user %>
+<% form_for :@user, :url=>{:action=>'update', :id=>@user.id} do |f| -%>
+
+  <p><%= label_tag I18n.t(:name) %>
+  <%= text_field :user, :name %></p>
+
+  <p><%= label_tag I18n.t(:password) %>
+  <%= password_field :user, :password %></p>
+
+  <p><%= label_tag I18n.t(:password_confirmation) %>
+  <%= password_field :user, :password_confirmation %></p>
+
+  <p><label>&nbsp;</label>
+  <%= submit_tag I18n.t(:send_data) %></p>
+<% end -%>
+

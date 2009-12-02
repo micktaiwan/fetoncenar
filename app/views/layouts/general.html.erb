@@ -18,7 +18,7 @@
 <% if current_user %>
 <%= link_to(I18n.t(:link_all_scripts), :controller=>:scripts)%> |
 <%= link_to(I18n.t(:my_scripts), :controller=>:scripts, :action=>:my)%> | 
-<!--<%= link_to(I18n.t(:my_profile), :controller=>:users, :action=>:profile, :id=>current_user.id)%> | -->
+<%= link_to(I18n.t(:my_profile), :controller=>:users, :action=>:profile, :id=>current_user.id)%> |
 <%= link_to(I18n.t(:logout), :controller=>:sessions, :action=>:destroy)%> |
 <% else %>
 <%= link_to(I18n.t(:log_in), :controller=>:sessions, :action=>:new)%> |

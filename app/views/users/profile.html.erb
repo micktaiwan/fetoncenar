@@ -1,0 +1,12 @@
+<h1><%=I18n.t(:my_profile)%></h1>
+<% if @user == current_user %>
+<%= link_to(I18n.t(:edit_my_profile), {:action=>:edit}, {:class=>'btnlnk'}) %><br/>
+<% end %>
+<br/>
+<%= @user.name %>
+
+<%# if @user.last_login %>
+<%#= I18n.t(:last_login_date, :time=>time_ago_in_words(@user.last_login)) %><br/>
+<%# end %>
+<br/>
+

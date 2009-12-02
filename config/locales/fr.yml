@@ -7,8 +7,9 @@ fr:
   link_all_scripts:             "Voir les scénarios publiques"
   all_scripts:                  "Tous les scénarios publiques"
   my_profile:                   "Mon profile"
+  edit_my_profile:              "Editer"
   logout:                       "Déconnexion"
-  log_in:                       "Signer"
+  log_in:                       "Connexion"
   signup:                       "S'enregistrer"
   send_data:                    "Envoyer"
   edit:                         "Editer"
@@ -18,6 +19,9 @@ fr:
   contributors:                 "Contributeurs"
   show:                         "Montrer"
   no_permission:                "Vous n'avez pas les droits de visualisation sur ce texte"
+  name:                         "Nom"
+  password:                     "Mot de passe"
+  password_confirmation:        "Confirmation"
 
 # scripts
 

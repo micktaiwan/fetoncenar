@@ -1,4 +1,4 @@
-<h1><%= @script.name %></h1>
+<h1><%= h @script.name %></h1>
 <% has_rights = @script.cowriters.include?(current_user) ; if has_rights %>
 <%= link_to(I18n.t(:edit), {:controller=>:scripts, :action=>:edit, :id=>@script.id}, {:class=>'btnlnk'}) %> |
 <%= link_to(I18n.t(:development), {:controller=>:development, :id=>@script.id}, {:class=>'btnlnk'}) %><br/>
@@ -8,7 +8,7 @@
 <%= I18n.t(:updated_at, :time=>time_ago_in_words(@script.updated_at)) %><br/>
 <div id="script">
 <div class="accordion-toggle accordion-toggle-active"><%= I18n.t(:pitch) %></div>
-<%= simple_format @script.pitch %>
+<%= @script.pitch.to_html %>
 <br/>
 <%= render(:partial=>'chapter', :collection=>@chapters) %>
 </div>
