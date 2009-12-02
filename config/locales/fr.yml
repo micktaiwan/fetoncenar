@@ -6,7 +6,7 @@ fr:
   my_scripts:                   "Mes scénarios"
   link_all_scripts:             "Voir les scénarios publiques"
   all_scripts:                  "Tous les scénarios publiques"
-  my_profile:                   "Mon profile"
+  my_profile:                   "Profile"
   edit_my_profile:              "Editer"
   logout:                       "Déconnexion"
   log_in:                       "Connexion"
@@ -38,6 +38,7 @@ fr:
   script_published:             "Publié"
   _yes:                         "Oui"
   __no:                         "Non"
+  nb_paragraphs:                "Ce script a {{nb}} paragraphes"
 
 # development
 
@@ -45,6 +46,8 @@ fr:
   characters:                   "Personnages"
   new_character:                "Créer un personnage"
   real_story:                   "La véritable histoire. Donnez les détails de l'histoire pour vos collaborateurs."
+  back_to_script:               "Retour au script"
+  empty_chapter:                "(chapitre vide)"
 
   activerecord:
     errors:

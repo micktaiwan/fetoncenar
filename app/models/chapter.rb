@@ -10,5 +10,5 @@ class Chapter < ActiveRecord::Base
     self.script.save
   end
 
-
 end
+

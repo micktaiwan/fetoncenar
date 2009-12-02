@@ -8,9 +8,10 @@ class Script < ActiveRecord::Base
   has_many :cowriters,    :through=>:user_scripts, :conditions=>"rights<=#{Role::CoWriter}"
   has_many :reviewers,    :through=>:user_scripts, :conditions=>"rights<=#{Role::Reviewer}"
   has_many :chapters
+  has_many :paragraphs, :through=>:chapters, :foreign_key=>'script_id'
 
   def add_admin(user)
-    UserScript.create(:user_id=>user.id, :script_id=>self.id, :rights=>1)
+    UserScript.create(:user_id=>user.id, :script_id=>self.id, :rights=>Role::Author)
   end  
   
   def contributors_names

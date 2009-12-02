@@ -1,5 +1,5 @@
 <div id="para_<%=paragraph.id%>" class="paragraph">
-<%= simple_format(h paragraph.text) %>
+<%= paragraph.text.to_html %>
 <% if paragraph.chapter.script.cowriters.include?(current_user) %>
 <%= link_to_remote(image_tag('para_edit.png'), :url=>{:action=>:edit_para, :id=>paragraph.id}, :update=>"para_#{paragraph.id}") %>
 <%= link_to_remote(image_tag('para_delete.png'), :url=>{:action=>:destroy_para, :id=>paragraph.id}, :loading=>"$('para_#{paragraph.id}').hide();", :confirm=>I18n.t(:del_confirm)) %>

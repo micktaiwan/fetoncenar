@@ -3,7 +3,7 @@
 </div>
 
 <div id="ch_<%=chapter.id%>" class="accordion-content">
-<div id="new_para_<%=chapter.id%>"><% if chapter.paragraphs == [] %>Empty<% end %></div>
+<div id="new_para_<%=chapter.id%>"><% if chapter.paragraphs == [] %><%= I18n.t(:empty_chapter) %><% end %></div>
 <%= render(:partial=>'paragraph', :collection=>chapter.paragraphs) %>
 </div>
 
