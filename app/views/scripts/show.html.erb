@@ -8,7 +8,7 @@
 <%= I18n.t(:updated_at, :time=>time_ago_in_words(@script.updated_at)) %><br/>
 <div id="script">
 <div class="accordion-toggle accordion-toggle-active"><%= I18n.t(:pitch) %></div>
-<%= @script.pitch.to_html %>
+<%= @script.pitch.chain(:to_html) %>
 <br/>
 <%= render(:partial=>'chapter', :collection=>@chapters) %>
 </div>
