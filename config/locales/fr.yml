@@ -47,7 +47,12 @@ fr:
   new_character:                "Créer un personnage"
   real_story:                   "<b>La véritable histoire.</b><br/>Donnez les détails de l'histoire pour vos collaborateurs."
   back_to_script:               "Retour au script"
+  back_to_dev:                  "Retour au développement"
   empty_chapter:                "(chapitre vide)"
+  character_name:               "Nom"
+  character_description:        "Description"
+  edit_character:               "Edition d'un personnage"
+  title_characters:             "Personnages"
 
   activerecord:
     errors:

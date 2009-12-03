@@ -9,12 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091202201254) do
+ActiveRecord::Schema.define(:version => 20091203190314) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "script_id",  :null => false
     t.integer  "order"
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "characters", :force => true do |t|
+    t.string   "name"
+    t.text     "descr"
+    t.integer  "script_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

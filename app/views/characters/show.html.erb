@@ -1,0 +1,8 @@
+<%= render(:file=>'characters/menu') %>
+
+<b><%= @char.name %></b>
+<%= link_to(I18n.t(:edit), {:action=>:edit, :id=>@char.id}, {:class=>'btnlnk'}) %><br/>
+<div class="text_content">
+<%= @char.descr.chain(:to_html) %>
+</div>
+

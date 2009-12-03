@@ -1,8 +1,8 @@
 class DevelopmentController < ApplicationController
 
   def index
-    session[:current_script_id] = params[:id]
-    @script  = Script.find(session[:current_script_id])
+    session[:script_id] = params[:id]
+    @script  = Script.find(session[:script_id])
     check_role(@script, "cowriters")
   end
   
@@ -10,7 +10,6 @@ class DevelopmentController < ApplicationController
     @script = Script.find(params[:id])
     check_role(@script, "cowriters")
   end
-
   
   def update_real_story
     id = params[:id]
