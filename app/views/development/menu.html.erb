@@ -1,4 +1,5 @@
 <%= link_to(I18n.t(:back_to_script), {:controller=>'scripts', :action=>'show', :id=>@script.id}, {:class=>'btnlnk'}) %> |
-<%= link_to(I18n.t(:title_characters), {:controller=>:characters, :action=>:index}, {:class=>'btnlnk'}) %>
+<%= link_to(I18n.t(:title_characters), {:controller=>:characters, :action=>:index}, {:class=>'btnlnk'}) %> |
+<%= link_to(I18n.t(:new_character), {:controller=>:characters, :action=>:new}, {:class=>'btnlnk'}) %>
 <br>
 <br>
