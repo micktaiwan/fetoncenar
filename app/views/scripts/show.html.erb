@@ -6,8 +6,7 @@
 <% end %>
 <%= I18n.t(:contributors) %>: <%= @script.contributors_names%><br/>
 <%= I18n.t(:updated_at, :time=>time_ago_in_words(@script.updated_at)) %><br/>
-<%= I18n.t(:nb_paragraphs, :nb=>@script.paragraphs_count) %><br/>
-<%= @script.paragraphs.size %><br/>
+<%= I18n.t(:nb_paragraphs, :nb=>@script.paragraphs.length.to_s) %>.<br/>
 <div id="script">
 <div class="accordion-toggle accordion-toggle-active"><%= I18n.t(:pitch) %></div>
 <%= @script.pitch.chain(:to_html) %>

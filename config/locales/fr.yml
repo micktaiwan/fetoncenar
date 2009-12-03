@@ -45,7 +45,7 @@ fr:
   development:                  "Construction"
   characters:                   "Personnages"
   new_character:                "Créer un personnage"
-  real_story:                   "La véritable histoire. Donnez les détails de l'histoire pour vos collaborateurs."
+  real_story:                   "<b>La véritable histoire.</b><br/>Donnez les détails de l'histoire pour vos collaborateurs."
   back_to_script:               "Retour au script"
   empty_chapter:                "(chapitre vide)"
 
