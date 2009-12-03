@@ -24,3 +24,4 @@ class OpenidController < ApplicationController
   end
 
 end
+

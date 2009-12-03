@@ -60,12 +60,12 @@ private
   
   def successful_login
     self.current_user = @current_user
-    redirect_to("/")
+    redirect_to("/scripts/my")
   end
 
   def failed_login(message)
     flash[:error] = message
-    redirect_to("/")
+    redirect_to("/login")
   end
 
 end
