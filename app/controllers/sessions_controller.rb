@@ -31,11 +31,42 @@ class SessionsController < ApplicationController
     redirect_back_or_default('/')
   end
 
+  def openid
+    open_id_authentication
+  end
+
 protected
   # Track failed login attempts
   def note_failed_signin
     flash[:error] = "Couldn't log you in as '#{params[:email]}'"
     logger.warn "Failed login for '#{params[:email]}' from #{request.remote_ip} at #{Time.now.utc}"
   end
+
+private
+
+  def open_id_authentication
+    authenticate_with_open_id do |result, identity_url|
+      if result.successful?
+        if @current_user = User.find_by_identity_url(identity_url)
+          successful_login
+        else
+          redirect_to("/openid/associate_login?iurl=#{identity_url}")
+        end
+      else
+        failed_login result.message
+      end
+    end  
+  end
+  
+  def successful_login
+    self.current_user = @current_user
+    redirect_to("/")
+  end
+
+  def failed_login(message)
+    flash[:error] = message
+    redirect_to("/")
+  end
+
 end
 

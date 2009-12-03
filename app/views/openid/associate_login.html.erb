@@ -1,0 +1,11 @@
+<h1>Associate OpenID with a login</h1>
+<% form_tag :action=> "associate" do %>
+	<label for="user_email">Email:</label>
+   <input type="text" name="user[email]" id="user_email" size="30" value=""/><br/>
+   <label for="user_password">Mot de passe:</label>
+   <input type="password" name="user[password]" id="user_password" size="30"/><br/>
+   <input type="hidden" name="iurl" value="<%= @iurl %>" /><br/>
+   <label>&nbsp;</label>
+   <input type="submit" name="login" value="Associate login &#187;" class="submitbutton" /> <% if @message %><div id="notice"><%= @message %></div><% end %>
+<% end %>
+
