@@ -53,6 +53,9 @@ strong { font-size:0.8em; font-weight:bold; color: red;}
   }
 .chapter_descr {
   border-bottom: 1px solid #777;
+  font-size: 0.8em;
+  margin: 0 0 15px 0;
+  color: #555;
   }
 .loading {
   background:  #AAA;
