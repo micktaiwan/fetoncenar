@@ -68,6 +68,13 @@ class ScriptsController < ApplicationController
     check_role(@chapter.script, "cowriters")
     render(:partial=>'edit_chapter')
   end
+
+  def edit_chapter_descr
+    @chapter = Chapter.find(params[:id])
+    check_role(@chapter.script, "cowriters")
+    render(:partial=>'edit_chapter_descr')
+  end
+
   
   def update_chapter
     @chapter = Chapter.find(params[:id])
@@ -75,6 +82,14 @@ class ScriptsController < ApplicationController
     @chapter.update_attributes(params[:chapter])
     render(:partial=>'chapter_title', :locals=>{:chapter=>@chapter})
   end
+
+  def update_chapter_descr
+    @chapter = Chapter.find(params[:id])
+    check_role(@chapter.script, "cowriters")
+    @chapter.update_attributes(params[:chapter])
+    render(:partial=>'chapter_descr', :locals=>{:chapter=>@chapter})
+  end
+
   
   def new_para
     @chapter_id = params[:id]

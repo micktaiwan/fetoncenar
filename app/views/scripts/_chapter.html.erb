@@ -3,6 +3,13 @@
 </div>
 
 <div id="ch_<%=chapter.id%>" class="accordion-content">
+<% if chapter.script.cowriters.include?(current_user) %>
+<div id="ch_descr_<%=chapter.id%>" class="chapter_descr">
+<%= chapter.descr %>
+<%= link_to_remote(image_tag('chap_edit.png'), :url=>{:action=>:edit_chapter_descr, :id=>chapter.id}, :update=>"ch_descr_#{chapter.id}") %>
+</div>
+<% end %>
+
 <div id="new_para_<%=chapter.id%>"><% if chapter.paragraphs == [] %><%= I18n.t(:empty_chapter) %><% end %></div>
 <%= render(:partial=>'paragraph', :collection=>chapter.paragraphs) %>
 </div>

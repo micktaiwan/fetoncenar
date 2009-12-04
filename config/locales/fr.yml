@@ -32,6 +32,7 @@ fr:
   read:                         "Lire"
   new_chapter:                  "Nouveau chapitre"
   chapter_title:                "Titre"
+  chapter_descr:                "Décrivez le but du chapitre à vos coauteurs"
   add_para:                     "Ajouter un nouveau paragraphe"
   para_text:                    "Texte"
   public:                       "Public"

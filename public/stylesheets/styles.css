@@ -42,7 +42,7 @@ strong { font-size:0.8em; font-weight:bold; color: red;}
   }
 .chapter_time {
   font-size: 0.75em; 
-  float: right;
+  /*float: right;*/
   }  
 .paragraph {
   margin:10px;
@@ -50,6 +50,9 @@ strong { font-size:0.8em; font-weight:bold; color: red;}
 .chapter_title {
   width:98%;
   font-size: 0.8em;
+  }
+.chapter_descr {
+  border-bottom: 1px solid #777;
   }
 .loading {
   background:  #AAA;

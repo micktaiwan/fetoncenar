@@ -1,0 +1,3 @@
+<%= @chapter.descr %>
+<%= link_to_remote(image_tag('chap_edit.png'), :url=>{:action=>:edit_chapter_descr, :id=>@chapter.id}, :update=>"ch_descr_#{@chapter.id}") %>
+
