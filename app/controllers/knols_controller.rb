@@ -31,9 +31,9 @@ class KnolsController < ApplicationController
   def update
     @script = Script.find(session[:script_id])
     check_role(@script, "cowriters")
-    char = Knol.find(params[:id])
-    char.update_attributes(params[:char])
-    redirect_to :action=>:show, :id=>char.id
+    knol = Knol.find(params[:id])
+    knol.update_attributes(params[:knol])
+    redirect_to :action=>:show, :id=>knol.id
   end
   
   def show

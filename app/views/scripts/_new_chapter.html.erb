@@ -3,10 +3,10 @@
 <% form_remote_for(:chapter, @chapter, :url => {:action=>:create_chapter}, :loading=>"$('loading').show()", :update=>"script", :position=>:bottom, :complete=>"$('new_chapter').update('');") do |f| %>
 
   <%=I18n.t(:chapter_title)%>
-  <%= f.text_field(:title, :size=>60) %><br/>
+  <%= f.text_field(:title, :size=>50) %><br/>
 
   <%=I18n.t(:chapter_descr)%><br/>
-  <%= f.text_area(:descr, :cols=>80, :rows=>10) %><br/>
+  <%= f.text_area(:descr, :cols=>70, :rows=>10) %><br/>
 
   <%= submit_tag I18n.t(:send_data) %>
   <div id="loading" class="loading" style="display:none;"><%= I18n.t(:saving) %>...</div>
