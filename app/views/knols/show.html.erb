@@ -1,0 +1,8 @@
+<%= render(:file=>'knols/menu') %>
+
+<b><%= @knol.name %></b>
+<%= link_to(I18n.t(:edit), {:action=>:edit, :id=>@knol.id}, {:class=>'btnlnk'}) %><br/>
+<div class="text_content">
+<%= @knol.descr.chain(:to_html) %>
+</div>
+

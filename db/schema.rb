@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091203205636) do
+ActiveRecord::Schema.define(:version => 20091204194932) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "script_id",  :null => false
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20091203205636) do
     t.datetime "updated_at"
   end
 
-  create_table "characters", :force => true do |t|
+  create_table "knols", :force => true do |t|
     t.string   "name"
     t.text     "descr"
     t.integer  "script_id"

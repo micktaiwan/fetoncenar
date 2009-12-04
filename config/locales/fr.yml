@@ -43,16 +43,17 @@ fr:
 # development
 
   development:                  "Construction"
-  characters:                   "Personnages"
-  new_character:                "Créer un personnage"
+  knols:                        "Fiches"
+  new_knol:                     "Créer une fiche"
   real_story:                   "<b>La véritable histoire.</b><br/>Donnez les détails de l'histoire pour vos collaborateurs."
   back_to_script:               "Retour au script"
   back_to_dev:                  "Retour au développement"
   empty_chapter:                "(chapitre vide)"
-  character_name:               "Nom"
-  character_description:        "Description"
-  edit_character:               "Edition d'un personnage"
-  title_characters:             "Personnages"
+  knol_name:                    "Nom"
+  knol_description:             "Description"
+  edit_knol:                    "Edition d'une fiche"
+  title_knols:                  "Fiches"
+  knols_explanation:            "Les fiches servent à construire les références de votre scénario. Les personages, les lieux, tous les composants de l'atmosphère qui doivent être expliqués à vos coauteurs.<br/><br/>"
 
   activerecord:
     errors:

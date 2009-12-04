@@ -1,0 +1,9 @@
+<h1><%=I18n.t(:edit_knol)%></h1>
+
+<%= error_messages_for :knol %>
+<% form_for :@knol, :url=>{:action=>'update', :id=>@knol.id} do |f| -%>
+  <%= render(:partial => f) %>
+  <p><label>&nbsp;</label>
+  <%= submit_tag I18n.t(:send_data) %></p>
+<% end -%>
+
