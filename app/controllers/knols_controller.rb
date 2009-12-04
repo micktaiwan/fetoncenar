@@ -11,7 +11,7 @@ class KnolsController < ApplicationController
   end
   
   def create
-    @knol = Knol.new(params[:char])
+    @knol = Knol.new(params[:knol])
     @knol.script_id = session[:script_id]
     @knol.save
     if @knol.errors.empty?
